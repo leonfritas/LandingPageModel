@@ -1,0 +1,13 @@
+/* .scroll-arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .scroll-arrow.visible {
+    opacity: 1;
+    visibility: visible;
+  } */

@@ -1,0 +1,97 @@
+.mainHeader{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logoHeader{
+    width: 50px;
+    height: 50px;
+}
+.Header{
+
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    position: fixed;
+    z-index: 1;
+    width: 90%;
+    background-color: rgba(247, 246, 246, 0.596);    
+    margin: 20px 50px;    
+    border-radius: 30px;
+}
+.max-w-7xl{
+    margin: 0;
+}
+
+.navHeader{
+    width: 90%;
+}
+
+.divHeader{
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.linkHeader{
+    color:black;
+}
+
+.linkHeader:hover{
+    color:#353535;
+}
+
+.buttonHeader{
+    color: black;
+    cursor: pointer;
+    border: #969696 2px solid;
+}
+
+.teste{
+    border: 1px solid red;
+}
+
+.menuResponsivo{
+    width: 80%;
+    background-color: rgba(88, 88, 88, 0.596); 
+    border-radius: 30px;
+    margin: 10px;  
+    color: white;
+}
+
+.themeIcon{
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+}
+
+.saudacaoHeader{
+    color: #2c2c2c;
+}
+
+@media (max-width:720px){
+    .facaSeuPedido{
+
+        width: 100%;
+    }
+    .themeIcon{
+        display: none;
+    }
+}
+
+.dark-theme{
+    background-color: #333;
+    color: white;
+}
+
+.dark-theme a{
+    color: white;
+}
+
+.dark-theme p{
+    color: white;
+}
+
