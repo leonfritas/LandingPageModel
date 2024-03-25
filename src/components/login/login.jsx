@@ -17,10 +17,8 @@ export default function Login() {
   const logar = (e) => {
     if(e.key === 'Enter'){ 
       if(email === "cliente"  && password === "123"){
-         navigate('./home')      
-      }else if (email === "administrador"  && password === "123"){
-        navigate('./dashboard')    
-      }else{
+         navigate('../')      
+      }else{ 
         setPassword('')
         alert('Usuário ou senha não encontrados.')
       }
@@ -66,7 +64,7 @@ export default function Login() {
 
               <div className="container-login-form-btn">
                 <Link to={email === 'administrador' && password === '123'? '/dashboard': '' ||
-                          email === 'cliente'       && password === '123'? '/home'     : '' } className="login-form-btn">
+                          email === 'cliente'       && password === '123'? '/'     : '' } className="login-form-btn">
                   Login
                 </Link>              
               </div>

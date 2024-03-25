@@ -16,8 +16,8 @@ function AppRoutes() {
       <LoginContext.Provider value={ {setEmail, setShowProfile, email} }>
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={<Login />} />
-            <Route exact path="/home" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/login" element={<Login />} />
           </Routes>
         </BrowserRouter> 
        </LoginContext.Provider>       

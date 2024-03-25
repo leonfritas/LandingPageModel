@@ -8,26 +8,44 @@
     width: 50px;
     height: 50px;
 }
-.Header{
 
+.Header{
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f2f2f2;
     position: fixed;
     z-index: 1;
     width: 90%;
     background-color: rgba(247, 246, 246, 0.596);    
     margin: 20px 50px;    
     border-radius: 30px;
+    transition: ease-in-out 1s;
+    font-family: 'Courier New', Courier, monospace;
 }
+
+.HeaderScroll{
+    background-color: #F2F2F2;
+    transform: translateY(-80px);
+    border: 1px #85858591 solid;
+}
+
+.HeaderScrollEnter{
+    background-color:#F2F2F2;
+    border: 1px #85858591 solid;
+}
+
 .max-w-7xl{
     margin: 0;
 }
 
 .navHeader{
     width: 90%;
+}
+
+.navHeader .linkHeader{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
 }
 
 .divHeader{
@@ -50,10 +68,6 @@
     border: #969696 2px solid;
 }
 
-.teste{
-    border: 1px solid red;
-}
-
 .menuResponsivo{
     width: 80%;
     background-color: rgba(88, 88, 88, 0.596); 
@@ -66,10 +80,20 @@
     cursor: pointer;
     position: absolute;
     right: 40px;
+    display: flex;
+    flex: row;
+    gap: 20px;
+
 }
 
-.saudacaoHeader{
-    color: #2c2c2c;
+.divSaudacaoHeader{
+    display: flex;
+    gap: 10px;
+}
+
+.themeIcon{
+    gap: 20px;
+    align-items: center;
 }
 
 @media (max-width:720px){
@@ -93,5 +117,103 @@
 
 .dark-theme p{
     color: white;
+}
+
+.BtnEntrar {
+    width: fit-content;
+    min-width: 100px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 30px;
+    border: 2.5px solid #e0e1e4;
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.411);
+    transition: all 0.2s ease-in-out 0ms;
+    user-select: none;
+    /* font-family: 'Poppins', sans-serif; */
+  }
+  
+  .BtnEntrar:hover {
+    background-color: #F2F2F2;
+    box-shadow: 0px 0px 20px -18px;
+  }
+  
+  .BtnEntrar:active {
+    transform: scale(0.95);
+  }
+
+  .relative{
+    position: relative;
+    width: 50px;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
+    left: -80px;
+    bottom: -10px;
+    width: 50px;
+    height: 20px; 
+  
+ }
+
+ .dropdown-menu:hover{
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    opacity: 1;
+    width: 100px;
+ }
+
+
+ .dropDownList{
+    list-style: none;
+    padding: unset;
+    margin: unset;
+    transition: ease-in-out all linear 1s; 
+  }
+
+ .dropDownList{
+    margin-top: 20px;  
+    padding-top: 40px;  
+    background-color: rgba(247, 246, 246, 0.384);   
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 170px;
+    transition: all linear 0.3s;
+ }
+
+
+   
+ li {
+    padding: 14px;
+    transition: all linear 0.3s;
+  }
+  
+  li:hover {
+    background: rgba(224, 224, 224, 0.466);
+    cursor: pointer;
+  }
+
+  .iconWpp{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+
+  }
+
+  .iconWpp img{
+    width: 100%;
+    transition: 1s ease-in-out linear;
+  }
+
+  .dropdown-menu:hover ~ .Header {
+    width: 150px;
+	transition: 1s;
+	background-color: red
 }
 
