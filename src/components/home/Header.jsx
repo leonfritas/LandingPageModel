@@ -145,6 +145,9 @@ export default function Header() {
                 <a onClick={() => setToggleMenu(!toggleMenu)} href="#sobre">Sobre</a>
                 <a onClick={() => setToggleMenu(!toggleMenu)} href="#produtos">Produtos</a>
                 <a onClick={() => setToggleMenu(!toggleMenu)} href="#receitas">Receitas</a>
+                {email === '' ?<Link to='./login'> <a onClick={() => setToggleMenu(!toggleMenu)} href="#painel" >Entrar</a></Link> 
+                :  <a onClick= {refreshPage} href="#painel">Sair</a>
+                }               
               </div>
             </div>
           </div>
