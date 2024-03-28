@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
 }
 
 .container-login {
@@ -240,17 +241,19 @@
     background-color: #eadfb4;
     padding-top: 100px;
   }
-  .login-form{
-    height: 100%;
-  }
+
   .wrap-login {
     width: 300px;
     background-color: #35374b;
     border-radius: 10px;
-  
     overflow: hidden;
-    padding: 77px 55px 33px 55px;
+  
   }
+
+  .login-form{
+    height: 100%;
+  }
+
   .login-form-title {
     align-items: flex-start;
   }
