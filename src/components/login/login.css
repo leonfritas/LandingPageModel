@@ -1,64 +1,70 @@
-Body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
+
 
 .container {
   width: 100%;
   margin: 0%;
-}
-img {
-  width: 20%;
-  padding-right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container-login {
   width: 100%;
   min-height: 100vh;
-
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
-  background-color: #eadfb4;
+  background: linear-gradient(to right,#677ad9de, #490328cc, #3c2d88e1);
+  
 }
 
 .wrap-login {
-  width: 390px;
-  background-color: #35374b;
-  border-radius: 10px;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 380px;
+  border-radius: 50px;
   overflow: hidden;
-  padding: 77px 55px 33px 55px;
-
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  height: 500px;
+  padding: 40px;
+  border: none;
+  background: linear-gradient(to right, #49032875, #3c2d8846, #677ad985);
+
 }
+
+.wrap-login img{
+  width: 130px;
+  opacity: 0.5;
+}
+
 
 .login-form {
   width: 100%;
-}
-
-.login-form-title {
   display: flex;
-  justify-content: center;
-  font-size: 30px;
-  color: azure;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 
-  line-height: 1.4;
-  text-align: center;
-}
-
-.login-form-title img {
-  width: 90px;
+  
 }
 
 .wrap-input {
-  width: 100%;
+  width: 90%;
   position: relative;
-  border-bottom: 2px solid #adadad;
+  border-bottom: 2px solid #cccaca;
   margin-bottom: 37px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;  
+}
+
+.iconPassword, .iconEmail{
+  color: white;
+  margin-right: 20px;
 }
 
 .input {
@@ -67,13 +73,13 @@ img {
   line-height: 1.2;
   border: none;
   display: block;
-
   width: 100%;
   height: 45px;
-
   background-color: transparent;
-
   padding: 0 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 500;
 }
 
 .focus-input {
@@ -81,10 +87,8 @@ img {
   display: block;
   width: 100%;
   height: 100%;
-
   top: 0;
   left: 0;
-
   pointer-events: none;
   color: #adadad;
 }
@@ -97,11 +101,9 @@ img {
   left: 0;
   width: 0;
   height: 2px;
-
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
-
   background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
   background: -o-linear-gradient(to left, #21d4fd, #b721ff);
   background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
@@ -112,17 +114,13 @@ img {
   font-size: 15px;
   color: #999999;
   line-height: 1.2;
-
   content: attr(data-placeholder);
-
   display: block;
   width: 100%;
   position: absolute;
   top: 16px;
   left: 0px;
-
   padding-left: 5px;
-
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -148,30 +146,25 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 13px;
+  width: 100%;
 }
 
 .login-form-btn {
   font-size: 15px;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   color: #fff;
-
   line-height: 1.2;
-
   text-transform: uppercase;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
   height: 50px;
-
-  background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
-  background: -o-linear-gradient(to left, #21d4fd, #b721ff);
-  background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
-  background: linear-gradient(to left, #21d4fd, #b721ff);
+  background: linear-gradient(to right, #49032896, #3c2d88e1, #677ad9a9);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .login-form-btn:hover {
@@ -179,11 +172,12 @@ img {
 }
 
 .text-center {
+  width: 95%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-
-  margin-top: 50px;
+  margin: 0 0 30px 0 ;
+  
 }
 
 .txt1 {
@@ -191,13 +185,26 @@ img {
   color: #adadad;
   line-height: 1.5;
   text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.divChk{
+  display: flex;
+  align-items: center;
+}
+
+.chkRemember{
+  background: black;
+  margin-right: 5px;
 }
 
 .txt2 {
   font-size: 14px;
-  color: #6a7dfe;
   line-height: 1.5;
+  color: #adadad;
   text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
 }
 
 .imgLogin{

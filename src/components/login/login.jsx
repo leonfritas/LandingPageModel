@@ -2,17 +2,15 @@ import React from "react";
 import "./login.css";
 import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import img from "./img/img.gif";
-import car from "./img/car.gif";
-import {LoginContext} from '../../context/LoginContext'
-
+import { LoginContext } from '../../context/LoginContext'
+import { LockClosedIcon,EnvelopeIcon  } from "@heroicons/react/24/outline";
+import imgUserLogin from './img/userLogin.png'
 
 export default function Login() {
 
   const [password, setPassword] = useState("");
   const { email, setEmail } = useContext(LoginContext)
   const navigate = useNavigate();
-
 
   const logar = (e) => {
     if(e.key === 'Enter'){ 
@@ -25,21 +23,18 @@ export default function Login() {
     }        
   }
 
-
   /* INCIO DO CONTAINER DE LOGIN */
   return (
     
       <div className="container">
         <div className="container-login">
-          <img src={car} alt="carrinho de compras" />
-          <div className="wrap-login">
-            <form className="login-form">
-              <span className="login-form-title">Bem vindo!!</span>
-              <span className="login-form-title">
-                <img className="imgLogin" src={img} alt="" />
-              </span>
-
-              <div className="wrap-input">
+          <div className="wrap-login">            
+            <form className="login-form">    
+              <img className='imgUserLogin' src={imgUserLogin} alt="" />          
+              <span className="login-form-title">              
+              </span>              
+              <div className="wrap-input">   
+                <EnvelopeIcon class="iconEmail h-6 w-6 text-gray-500" />             
                 <input
                   className= {email !== "" ? "has-val input" : "input"}
                   type="email"
@@ -47,32 +42,33 @@ export default function Login() {
                   onChange={(e) => setEmail(e.target.value)}
                   autoComplete="off"
                   onKeyPress={logar} 
-                />
-                <span className="focus-input" data-placeholder="Email"></span>
+                  placeholder="Email ID" 
+                />                
               </div>
-
               <div className="wrap-input">
+                <LockClosedIcon class="iconPassword h-6 w-6 text-hw-500" />
                 <input
                   className={password !== "" ? "has-val input" : "input"}
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}   
-                  onKeyPress={logar}               
-                />
-                <span className="focus-input" data-placeholder="Password"></span>
+                  onKeyPress={logar}    
+                  placeholder="Password"           
+                />                          
               </div>
-
+              <div className="text-center">
+                <div className="divChk">
+                  <input className="chkRemember" type="checkbox" />
+                  <span className="txt1">Remember me</span>
+                </div>                
+                <a className="txt2">Forgot Password?</a>
+              </div>
               <div className="container-login-form-btn">
                 <Link to={email === 'administrador' && password === '123'? '/dashboard': '' ||
                           email === 'cliente'       && password === '123'? '/'     : '' } className="login-form-btn">
                   Login
                 </Link>              
-              </div>
-              <div className="text-center">
-                <span className="txt1">Não possui conta?</span>
-
-                <a className="txt2">Criar conta.</a>
-              </div>
+              </div>              
             </form>
           </div>
         </div>

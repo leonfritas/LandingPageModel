@@ -26,7 +26,7 @@
 
 .HeaderScroll{
     background-color: #F2F2F2;
-    transform: translateY(-80px);
+    transform: translateY(-100px);
     border: 1px #85858591 solid;
 }
 
@@ -83,7 +83,6 @@
     display: flex;
     flex: row;
     gap: 20px;
-
 }
 
 .divSaudacaoHeader{
@@ -98,12 +97,15 @@
 
 @media (max-width:720px){
     .facaSeuPedido{
-
         width: 100%;
     }
     .themeIcon{
         display: none;
     }
+    .relative{
+       display: none;
+      }
+    
 }
 
 .dark-theme{
@@ -155,7 +157,6 @@
     bottom: -10px;
     width: 50px;
     height: 20px; 
-  
  }
 
  .dropdown-menu:hover{
@@ -165,7 +166,6 @@
     opacity: 1;
     width: 100px;
  }
-
 
  .dropDownList{
     list-style: none;
@@ -183,7 +183,6 @@
     width: 170px;
     transition: all linear 0.3s;
  }
-
 
    
  li {
@@ -203,7 +202,6 @@
     width: 80px;
     height: 80px;
     z-index: 2;
-
   }
 
   .iconWpp img{

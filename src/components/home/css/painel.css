@@ -9,6 +9,21 @@
 animation: updown infinite alternate ease-in-out 500ms;
 }
 
+.setaBaixo{
+position: absolute;
+bottom: 150px;
+margin: auto;
+right: 50%;
+left: 50%;
+width: 50px;
+}
+
+@media(max-width: 600px){
+	.setaBaixo{
+		display: none;
+	}
+}
+
 
 @keyframes updown {
 	0% {

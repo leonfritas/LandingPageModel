@@ -34,39 +34,32 @@ export default function Header() {
 
   const navBar = document.getElementsByClassName('Header');
   const teste = document.getElementById("test");
-  
+  let top = false
 
   function handleScroll(){
     const scrollY = window.pageYOffset; 
     if(scrollY > 700){
       navBar[0].classList.add('HeaderScroll')
       setScrollTop(false)
+      top = false
     }else if(scrollY < 700){
-      console.log('caiu')
       navBar[0].classList.remove('HeaderScroll')
       navBar[0].style = '' 
       setScrollTop(true)
+      top = true
+    }
+    
+    console.log(top)
+    console.log(scrollY)
+
+    if (teste && top === false && scrollY > 700){
+      teste.addEventListener('click',()=>{
+        navBar[0].classList.remove('HeaderScroll')
+        navBar[0].classList.add('HeaderScrollEnter')
+
+    })
     }
   }
-
-
-  if (teste && scrollTop === false){
-    console.log(scrollTop)
-    teste.addEventListener('mouseenter',()=>{
-      navBar[0].classList.remove('HeaderScroll')
-      navBar[0].classList.add('HeaderScrollEnter')
-  })
-  }
-
-  if (teste && scrollTop === false){
-    console.log(scrollTop)  
-    teste.addEventListener('mouseleave',()=>{
-      navBar[0].classList.add('HeaderScroll')
-      navBar[0].classList.remove('HeaderScrollEnter')       
-  })
-  }
-
-
 
 
 

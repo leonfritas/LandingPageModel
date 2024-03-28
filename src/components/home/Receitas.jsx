@@ -19,7 +19,8 @@ export default function Receitas() {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('cardAnimation');            
-          } else {
+          } 
+          else {
             if (previousYRef.current > window.pageYOffset) {
               entry.target.classList.remove('cardAnimation');
             }

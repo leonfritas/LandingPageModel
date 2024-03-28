@@ -41,21 +41,11 @@ export default function Painel(){
 
                 
             </DivContainer> 
-            <SetaBaixo className='setaBaixo' src={SetaImg}>
-            </SetaBaixo>        
+            <img className='setaBaixo' src={SetaImg} alt=''/>
+                    
         </Main>
     )
 }
-
-
-const SetaBaixo = styled.img`
-position: absolute;
-bottom: 150px;
-margin: auto;
-right: 50%;
-left: 50%;
-width: 50px;
-`
 
 
 const Main = styled.main`
