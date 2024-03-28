@@ -72,8 +72,13 @@
     width: 80%;
     background-color: rgba(88, 88, 88, 0.596); 
     border-radius: 30px;
-    margin: 10px;  
-    color: white;
+    margin:10px;  
+    color: #222; 
+    background-color: rgba(247, 246, 246, 0.596);    
+}
+
+.menuResponsivoItens{
+    padding-top: 20px;
 }
 
 .themeIcon{
@@ -199,8 +204,8 @@
     position: fixed;
     right: 20px;
     bottom: 20px;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     z-index: 2;
   }
 

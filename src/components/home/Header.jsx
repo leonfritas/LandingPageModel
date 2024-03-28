@@ -140,7 +140,7 @@ export default function Header() {
             }`}
           >
             <div className=" px-8 ">
-              <div className="  flex flex-col gap-6 font-bold tracking-wider">
+              <div className= "menuResponsivoItens  flex flex-col gap-4 font-bold tracking-wider">
                 <a onClick={() => setToggleMenu(!toggleMenu)} href="#painel" >Home</a>
                 <a onClick={() => setToggleMenu(!toggleMenu)} href="#sobre">Sobre</a>
                 <a onClick={() => setToggleMenu(!toggleMenu)} href="#produtos">Produtos</a>
