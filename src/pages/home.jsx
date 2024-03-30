@@ -13,12 +13,12 @@ export default function Home(){
         return(
             <>
                 <Header/>
-                {/* <Painel/>
-                <Sobre/> */}
+                <Painel/>
+                <Sobre/>
                 <Produtos/>  
-                {/* <Receitas/>                                              
+                <Receitas/>                                              
                 <Footer/>
-                <ScrollArrow/> */}
+                <ScrollArrow/>
             </>
 
         )

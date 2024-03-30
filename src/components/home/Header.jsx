@@ -34,26 +34,21 @@ export default function Header() {
 
   const navBar = document.getElementsByClassName('Header');
   const teste = document.getElementById("test");
-  let top = false
+
 
   function handleScroll(){
     const scrollY = window.pageYOffset; 
     if(scrollY > 700){
       navBar[0].classList.add('HeaderScroll')
       setScrollTop(false)
-      top = false
-    }else if(scrollY < 700){
+      
+    }
+    else if(scrollY < 700 && scrollTop === false){
+      console.log(navBar[0])
       navBar[0].classList.remove('HeaderScroll')
       navBar[0].style = '' 
       setScrollTop(true)
-      top = true
-    }
-
-    if (teste && top === false && scrollY > 700){
-      teste.addEventListener('click',()=>{
-        navBar[0].classList.remove('HeaderScroll')
-        navBar[0].classList.add('HeaderScrollEnter')
-    })
+      
     }
   }
 
@@ -87,10 +82,7 @@ export default function Header() {
                   <div className="hidden lg:flex items-center gap-2">
                                                                                         
                   </div>
-                  <div className='facaSeuPedido hidden lg:flex '>
-                    {/* <a target='_blank'  href='https://api.whatsapp.com/send?phone=5592994107470&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta.' className=" buttonHeader rounded-full border-solid border-2 border-gray-300 py-2 px-4 hover:bg-gray-700 hover:text-gray-100">
-                      Faça aqui seu pedido
-                    </a> */}
+                  <div className='facaSeuPedido hidden lg:flex '>                
                                   
                   </div>
                   <div className='themeIcon ' onClick={() => setLight(!light)}>                                

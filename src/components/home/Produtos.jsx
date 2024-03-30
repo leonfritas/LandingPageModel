@@ -2,6 +2,9 @@
 import React, { useEffect, useState, useRef } from 'react'
 import './css/produtos.css'
 import carrinho from './img/carEdit.gif'
+import { Link, useNavigate } from 'react-router-dom'
+import './css/finalizarPedidoCartao.css'
+import { CheckIcon, XMarkIcon  } from "@heroicons/react/24/outline";
 
 
 export default function Produtos(){
@@ -9,6 +12,7 @@ export default function Produtos(){
     const [data, setData] = useState([])
     const carousel = useRef(null)    
     const [valorTotal, setValorTotal] = useState(0)
+    const [finalizarPedido, setFinalizarPedido] = useState(false)
 
     let carrinhoListaDinamicaLegendas = document.getElementsByClassName('carrinhoListaDinamicaLegendas')
     let carrinhoListaDinamicaValores = document.getElementsByClassName('carrinhoListaDinamicaValores')
@@ -39,6 +43,9 @@ export default function Produtos(){
       carrinhoListaDinamicaLegendas[0].innerHTML = ''
       setValorTotal(0)
     }
+
+  
+    
 
 
     return(
@@ -102,7 +109,7 @@ export default function Produtos(){
                 </div>
                 <div>
                   {valorTotal > 1?<button className='limparLista' onClick={limparLista}>Esvaziar lista</button>: ''}
-                  {valorTotal > 1?<a className='realizarPedido'>Realizar pedido</a> : ''}
+                  {valorTotal > 1?<button onClick={()=>setFinalizarPedido(true)}  className='realizarPedido' >Realizar pedido</button> : ''}
 
                 </div>
                  
@@ -116,7 +123,26 @@ export default function Produtos(){
                 <button className='buttonNext' onClick={handleRightClick}><img src="/static/image/setaCarousel.png" alt="Scroll Right" /></button>
               {/* </div> */}
                         
-            </div>           
+            </div>         
+            {finalizarPedido === true?        
+            <div id="finalizarPedido">              
+              <button onClick={() => setFinalizarPedido(false)}className="FPbotaoFechar">X</button>
+              <header className='FPHeader'><h2>Dados do cartão</h2></header>
+              <div className='FPDadosDoCartao'>
+                <label htmlFor="">Nome do Titular</label>
+                <input type="text" />
+                <label htmlFor="">CPF do Titular</label>
+                <input type="text" />
+                <label htmlFor="">Número do Cartão</label>
+                <input type="text" />
+
+              </div>
+              
+              <div className='FPButtons'>
+                <a><XMarkIcon class="h-6 w-6 " />Sair</a>
+                <a><CheckIcon class="h-6 w-6 " />Realizar Pagamento</a>
+              </div>
+            </div>: ''}
                                                     
         </main>        
     )
