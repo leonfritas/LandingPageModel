@@ -21,7 +21,7 @@ function AppRoutes() {
           </Routes>
         </BrowserRouter> 
        </LoginContext.Provider>       
-  / </ThemeProvider>
+   </ThemeProvider>
   );
 }
 

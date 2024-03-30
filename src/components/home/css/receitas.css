@@ -207,12 +207,12 @@
         display: flex;
         flex-direction: column-reverse;
     }
-     /* .inverterImg{
-        transform: translateY(-640px);
+    .divTextReceita{        
+        padding: 30px 30px;        
     }
-    .inverterText{
-        transform: translateY(360px);
-    }  */
+    .divTextReceita p{
+        text-align: justify;
+    }
 }
 /*
 limao  #BDD702  

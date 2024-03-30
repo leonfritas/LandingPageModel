@@ -34,7 +34,7 @@ export default function Login() {
               <span className="login-form-title">              
               </span>              
               <div className="wrap-input">   
-                <EnvelopeIcon class="iconEmail h-6 w-6 text-gray-500" />             
+                <EnvelopeIcon className="iconEmail h-6 w-6 text-gray-500" />             
                 <input
                   className= {email !== "" ? "has-val input" : "input"}
                   type="email"
@@ -46,7 +46,7 @@ export default function Login() {
                 />                
               </div>
               <div className="wrap-input">
-                <LockClosedIcon class="iconPassword h-6 w-6 text-hw-500" />
+                <LockClosedIcon className="iconPassword h-6 w-6 text-hw-500" />
                 <input
                   className={password !== "" ? "has-val input" : "input"}
                   type="password"
@@ -64,8 +64,7 @@ export default function Login() {
                 <a className="txt2">Forgot Password?</a>
               </div>
               <div className="container-login-form-btn">
-                <Link to={email === 'administrador' && password === '123'? '/dashboard': '' ||
-                          email === 'cliente'       && password === '123'? '/'     : '' } className="login-form-btn">
+                <Link to={email === 'cliente' && password === '123'? '/' : '' } className="login-form-btn">
                   Login
                 </Link>              
               </div>              

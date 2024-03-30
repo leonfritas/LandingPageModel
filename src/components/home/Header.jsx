@@ -48,19 +48,14 @@ export default function Header() {
       setScrollTop(true)
       top = true
     }
-    
-    console.log(top)
-    console.log(scrollY)
 
     if (teste && top === false && scrollY > 700){
       teste.addEventListener('click',()=>{
         navBar[0].classList.remove('HeaderScroll')
         navBar[0].classList.add('HeaderScrollEnter')
-
     })
     }
   }
-
 
 
   return (
@@ -134,22 +129,24 @@ export default function Header() {
             </div>
           </div>
           {/* Mobile */}
-          <div
-            className={`menuResponsivo fixed z-40 w-full  bg-gray-100 overflow-hidden flex flex-col lg:hidden gap-12  origin-top duration-700 ${
-              !toggleMenu ? "h-0" : "h-full"
-            }`}
-          >
-            <div className=" px-8 ">
-              <div className= "menuResponsivoItens  flex flex-col gap-4 font-bold tracking-wider">
-                <a onClick={() => setToggleMenu(!toggleMenu)} href="#painel" >Home</a>
-                <a onClick={() => setToggleMenu(!toggleMenu)} href="#sobre">Sobre</a>
-                <a onClick={() => setToggleMenu(!toggleMenu)} href="#produtos">Produtos</a>
-                <a onClick={() => setToggleMenu(!toggleMenu)} href="#receitas">Receitas</a>
-                {email === '' ?<Link to='./login'> <a onClick={() => setToggleMenu(!toggleMenu)} href="#painel" >Entrar</a></Link> 
-                :  <a onClick= {refreshPage} href="#painel">Sair</a>
-                }               
+          <div className='divMenuResponsivo'>
+            <div
+              className={`menuResponsivo fixed    bg-gray-100 overflow-hidden flex flex-col lg:hidden gap-12  origin-top duration-700 ${
+                !toggleMenu ? "h-0" : "h-full"
+              }`}
+            >
+              <div className=" px-8 ">
+                <div className= "menuResponsivoItens  flex flex-col gap-4 font-bold tracking-wider">
+                  <a onClick={() => setToggleMenu(!toggleMenu)} href="#painel" >Home</a>
+                  <a onClick={() => setToggleMenu(!toggleMenu)} href="#sobre">Sobre</a>
+                  <a onClick={() => setToggleMenu(!toggleMenu)} href="#produtos">Produtos</a>
+                  <a onClick={() => setToggleMenu(!toggleMenu)} href="#receitas">Receitas</a>
+                  {email === '' ?<Link to='./login'> <a onClick={() => setToggleMenu(!toggleMenu)} href="#painel" >Entrar</a></Link> 
+                  :  <a onClick= {refreshPage} href="#painel">Sair</a>
+                  }               
+                </div>
               </div>
-            </div>
+            </div>  
           </div>
         </nav>
         <div className='relative'>

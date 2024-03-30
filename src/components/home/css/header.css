@@ -68,17 +68,27 @@
     border: #969696 2px solid;
 }
 
+.divMenuResponsivo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .menuResponsivo{
-    width: 80%;
-    background-color: rgba(88, 88, 88, 0.596); 
+    width: 100%;    
     border-radius: 30px;
     margin:10px;  
     color: #222; 
-    background-color: rgba(247, 246, 246, 0.596);    
-}
+    background-color: rgba(247, 246, 246, 0);    
+} 
 
 .menuResponsivoItens{
-    padding-top: 20px;
+    padding: 20px 0;
+    background-color: #012414;
+    text-align: center; 
+    color: #f2f2f2;
+    width: 100%;    
+    border-radius: 30px;
 }
 
 .themeIcon{
