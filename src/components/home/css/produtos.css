@@ -1,4 +1,4 @@
-#produtos{
+/* #produtos{
     height: 100%;
     width: 100%;
     display: flex;
@@ -146,19 +146,6 @@
 }
 
 
-/* .divTop .buttons{
-    width: 100%;
-    text-align: center;
-    margin: 50px;
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
-    
-} */
-
-
-
 .divTop .carousel .item .info button{
     display: block;
     text-align: center;
@@ -168,7 +155,6 @@
 }
 
 .divTop  button{
-    /* background-color: transparent; */
     border: none;
     cursor: pointer;
 }
@@ -189,12 +175,12 @@
     right: -150px;
     top: 150px;
 
-}
+} */
 
 
 
 /********** Carrinho *********/
-
+/* 
 .carrinho{
     width: 100%;
     display: flex;
@@ -274,11 +260,11 @@
     } 
 }
 
-
+ */
 
 
 /******* Responsivo **********/
-
+/* 
 @media(max-width: 600px){
     #produtos{
         height: 100%;
@@ -298,7 +284,7 @@
         max-width: 100vw;
     }
 
-}
+} */
 
 
 /*
