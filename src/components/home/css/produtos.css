@@ -1,5 +1,5 @@
 #produtos{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -8,9 +8,9 @@
     background-color: #f2f2f2;
     padding:50px;
     gap: 20px;
-
-
 }
+
+
 
 .divTop{
     display: flex;
@@ -249,10 +249,20 @@
     width: 100%;
 }
 
-.limparLista{
+.limparLista, .realizarPedido{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     padding: 10px;
     border-radius: 20px ;
+    margin: 5px;
+}
+
+.realizarPedido{
+    background-color: #012414;
+    color: white;
+}
+
+.limparLista{    
+    color: red;
 }
 
 @keyframes carrinhoFromLeft {
@@ -263,10 +273,7 @@
         left: 100%;
     } 
 }
-#produtos{
-    height: 100%;
 
-}
 
 
 

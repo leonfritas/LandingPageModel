@@ -52,9 +52,7 @@ export default function Produtos(){
                   Uma seleção saudável e saborosa para sua dieta diária.
                 </h3>  
               </div>
-              <a>
-                Realizar pedido
-              </a>                              
+                                           
             </div>
             <div className='divTop' >              
               <div className='carousel' ref={carousel}>
@@ -77,7 +75,9 @@ export default function Produtos(){
                     </div>
                   ) 
                 })}
+                
               </div>
+              
               <div className='carrinho'>
                 <div className='carrinhoDivLista'>
                   <div className='carrinhoDivListaLegendas'>
@@ -100,11 +100,17 @@ export default function Produtos(){
                 
                     
                 </div>
-                {valorTotal > 1?<button className='limparLista' onClick={limparLista}>Esvaziar lista</button>: ''}
+                <div>
+                  {valorTotal > 1?<button className='limparLista' onClick={limparLista}>Esvaziar lista</button>: ''}
+                  {valorTotal > 1?<a className='realizarPedido'>Realizar pedido</a> : ''}
+
+                </div>
+                 
                 <div className='carrinhoDivImg'>
                   <img src={carrinho} alt="" />
                 </div>              
               </div>
+              
               {/* <div className='buttons'> */}
                 <button className='buttonPrev' onClick={handleLeftClick} ><img src="/static/image/setaCarousel.png" alt="Scroll Left" /></button>
                 <button className='buttonNext' onClick={handleRightClick}><img src="/static/image/setaCarousel.png" alt="Scroll Right" /></button>
