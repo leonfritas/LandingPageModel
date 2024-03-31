@@ -1,21 +1,21 @@
 
-// import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 // import './css/produtos.css'
-// import carrinho from './img/carEdit.gif'
+import carrinho from './img/carEdit.gif'
 // import { Link, useNavigate } from 'react-router-dom'
 // import './css/finalizarPedidoCartao.css'
-// import { CheckIcon, XMarkIcon  } from "@heroicons/react/24/outline";
+import { CheckIcon, XMarkIcon  } from "@heroicons/react/24/outline";
 
 
 export default function Produtos(){
 
     // const [data, setData] = useState([])
-    // const carousel = useRef(null)    
-    // const [valorTotal, setValorTotal] = useState(0)
-    // const [finalizarPedido, setFinalizarPedido] = useState(false)
+    const carousel = useRef(null)    
+    const [valorTotal, setValorTotal] = useState(0)
+    const [finalizarPedido, setFinalizarPedido] = useState(false)
 
-    // let carrinhoListaDinamicaLegendas = document.getElementsByClassName('carrinhoListaDinamicaLegendas')
-    // let carrinhoListaDinamicaValores = document.getElementsByClassName('carrinhoListaDinamicaValores')
+    let carrinhoListaDinamicaLegendas = document.getElementsByClassName('carrinhoListaDinamicaLegendas')
+    let carrinhoListaDinamicaValores = document.getElementsByClassName('carrinhoListaDinamicaValores')
 
     // useEffect(() =>{
     //   fetch('http://localhost:3000/static/itensCarousel.json')
@@ -23,32 +23,124 @@ export default function Produtos(){
     //   .then(setData)
     // }, [])
 
-    // const handleLeftClick = (e) => {
-    //   e.preventDefault();
-    //   carousel.current.scrollLeft -= carousel.current.offsetWidth;
-    // }
+    const handleLeftClick = (e) => {
+      e.preventDefault();
+      carousel.current.scrollLeft -= carousel.current.offsetWidth;
+    }
 
 
-    // const handleRightClick = (e) => {
-    //   e.preventDefault();
-    //   carousel.current.scrollLeft += carousel.current.offsetWidth;
-    // }
+    const handleRightClick = (e) => {
+      e.preventDefault();
+      carousel.current.scrollLeft += carousel.current.offsetWidth;
+    }
 
     
 
     // if(!data || !data.length) return null;
 
-    // function limparLista(){
-    //   carrinhoListaDinamicaValores[0].innerHTML = ''
-    //   carrinhoListaDinamicaLegendas[0].innerHTML = ''
-    //   setValorTotal(0)
-    // }
+    function limparLista(){
+      carrinhoListaDinamicaValores[0].innerHTML = ''
+      carrinhoListaDinamicaLegendas[0].innerHTML = ''
+      setValorTotal(0)
+    }
 
   
 
     return(
         <main id='produtos'> 
-            <p>teste</p>                                                    
+          <div className='divHeaderProdutos'>
+              <div  className='tituloProdutos'>
+                <h2>
+                  Sabor da Natureza em sua Mesa
+                </h2>
+                <h3>
+                  Uma seleção saudável e saborosa para sua dieta diária.
+                </h3>  
+              </div>
+                                           
+            </div>
+            <div className='divTop' >              
+              {/* <div className='carousel' ref={carousel}>
+                {data.map((item) => {  
+                  const {id, name, price, oldPrice, image} = item;
+                  return(
+                    <div className='item' key={id}>
+                      <div className='image'>
+                        <img src={image} alt={name} />
+                      </div>
+                      <div className='info'>
+                        <span className='name'>{name}</span>
+                        <span className='oldPrice'>{oldPrice}</span>
+                        <button onClick={()=> {
+                          setValorTotal(parseInt(valorTotal) + parseInt(price))
+                          carrinhoListaDinamicaLegendas[0].innerHTML += `<p>${name}</p>`
+                          carrinhoListaDinamicaValores[0].innerHTML += `<p>${price}</p>`
+                          }} className='price'>{price}</button>
+                      </div>
+                    </div>
+                  ) 
+                })}
+                
+              </div> */}
+              
+              <div className='carrinho'>
+                <div className='carrinhoDivLista'>
+                  <div className='carrinhoDivListaLegendas'>
+                    <h3>Lista de compras</h3>   
+                    
+                    <div className='carrinhoListaDinamicaLegendas'>
+                      {/* {valorTotal === 0? 'Lista vazia': ''} */}
+
+                    </div> 
+                    
+                    <p>Total</p>                                     
+                  </div>   
+                  <div className='carrinhoDivListaValores'>  
+                    <div className='carrinhoListaDinamicaValores'>
+                    
+
+                    </div>                                     
+                    <p>{valorTotal}</p> 
+                  </div>  
+                
+                    
+                </div>
+                <div>
+                  {valorTotal > 1?<button className='limparLista' onClick={limparLista}>Esvaziar lista</button>: ''}
+                  {valorTotal > 1?<button onClick={()=>setFinalizarPedido(true)}  className='realizarPedido' >Realizar pedido</button> : ''}
+
+                </div>
+                 
+                <div className='carrinhoDivImg'>
+                  <img src={carrinho} alt="" />
+                </div>              
+              </div>
+              
+              {/* <div className='buttons'> */}
+                <button className='buttonPrev' onClick={handleLeftClick} ><img src="/static/image/setaCarousel.png" alt="Scroll Left" /></button>
+                <button className='buttonNext' onClick={handleRightClick}><img src="/static/image/setaCarousel.png" alt="Scroll Right" /></button>
+              {/* </div> */}
+                        
+            </div>         
+            {finalizarPedido === true?        
+            <div id="finalizarPedido">              
+              <button onClick={() => setFinalizarPedido(false)}className="FPbotaoFechar">X</button>
+              <header className='FPHeader'><h2>Dados do cartão</h2></header>
+              <div className='FPDadosDoCartao'>
+                <label htmlFor="">Nome do Titular</label>
+                <input type="text" />
+                <label htmlFor="">CPF do Titular</label>
+                <input type="text" />
+                <label htmlFor="">Número do Cartão</label>
+                <input type="text" />
+
+              </div>
+              
+              <div className='FPButtons'>
+                <a><XMarkIcon class="h-6 w-6 " />Sair</a>
+                <a><CheckIcon class="h-6 w-6 " />Realizar Pagamento</a>
+              </div>
+            </div>: ''}                                                   
         </main>        
     )
 }
