@@ -35,7 +35,7 @@ export default function Produtos(){
     }
 
     
-
+  
     // if(!data || !data.length) return null;
 
     function limparLista(){
