@@ -59,8 +59,9 @@ export default function Produtos(){
               </div>
                                            
             </div>
-            <div className='divTop' >              
-              <div className='carousell' ref={carousel}>
+            <div className='divTop' >      
+            teste        
+              {/*<div className='carousell' ref={carousel}>
                 teste
                 {/* {data.map((item) => {  
                   const {id, name, price, oldPrice, image} = item;
@@ -80,9 +81,9 @@ export default function Produtos(){
                       </div>
                     </div>
                   ) 
-                })} */}
+                })} 
                 
-              </div>
+              </div>*/}
               
               <div className='carrinho'>
                 <div className='carrinhoDivLista'>
