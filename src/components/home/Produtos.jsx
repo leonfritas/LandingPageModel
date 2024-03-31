@@ -60,7 +60,8 @@ export default function Produtos(){
                                            
             </div>
             <div className='divTop' >              
-              <div className='carousel' ref={carousel}>
+              <div className='carousell' ref={carousel}>
+                teste
                 {/* {data.map((item) => {  
                   const {id, name, price, oldPrice, image} = item;
                   return(
