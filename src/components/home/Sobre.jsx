@@ -7,6 +7,7 @@ export default function Sobre(){
             <div className='divConteudo'>
                 <div className='textosSobre'>
                     <div className='textoEsquerda'>
+                    <h1 className='tituloTeste'>TESTE 1</h1>
                         <h2 className='titulo'>Um pouco sobre nós</h2>
                         <p className='texto'>
                             Bem-vindo ao Hortifruti Frescura Natural, onde cultivamos a qualidade, o frescor e a saúde em cada fruta, verdura e legume que oferecemos. Nossa jornada começou há mais de duas décadas, quando um grupo de apaixonados por agricultura e alimentação saudável decidiu unir forças para criar um espaço que refletisse seus valores e visão.
