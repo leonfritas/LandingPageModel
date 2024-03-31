@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 // import './css/produtos.css'
 import carrinho from './img/carEdit.gif'
-import { Link, useNavigate } from 'react-router-dom'
+// import { Link, useNavigate } from 'react-router-dom'
 // import './css/finalizarPedidoCartao.css'
 import { CheckIcon, XMarkIcon  } from "@heroicons/react/24/outline";
 
@@ -61,7 +61,7 @@ export default function Produtos(){
             </div>
             <div className='divTop' >              
               <div className='carousel' ref={carousel}>
-                {data.map((item) => {  
+                {/* {data.map((item) => {  
                   const {id, name, price, oldPrice, image} = item;
                   return(
                     <div className='item' key={id}>
@@ -79,7 +79,7 @@ export default function Produtos(){
                       </div>
                     </div>
                   ) 
-                })}
+                })} */}
                 
               </div>
               
