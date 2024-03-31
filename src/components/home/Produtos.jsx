@@ -17,11 +17,11 @@ export default function Produtos(){
     let carrinhoListaDinamicaLegendas = document.getElementsByClassName('carrinhoListaDinamicaLegendas')
     let carrinhoListaDinamicaValores = document.getElementsByClassName('carrinhoListaDinamicaValores')
 
-    useEffect(() =>{
-      fetch('http://localhost:3000/static/itensCarousel.json')
-      .then((response) => response.json())
-      .then(setData)
-    }, [])
+    // useEffect(() =>{
+    //   fetch('http://localhost:3000/static/itensCarousel.json')
+    //   .then((response) => response.json())
+    //   .then(setData)
+    // }, [])
 
     const handleLeftClick = (e) => {
       e.preventDefault();
