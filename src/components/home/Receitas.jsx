@@ -18,11 +18,11 @@ export default function Receitas() {
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('cardAnimation');            
+            // entry.target.classList.add('cardAnimation');            
           } 
           else {
             if (previousYRef.current > window.pageYOffset) {
-              entry.target.classList.remove('cardAnimation');
+              // entry.target.classList.remove('cardAnimation');
             }
           }
         });

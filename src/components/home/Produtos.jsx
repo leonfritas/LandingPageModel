@@ -9,7 +9,7 @@ import { CheckIcon, XMarkIcon  } from "@heroicons/react/24/outline";
 
 export default function Produtos(){
 
-    const [data, setData] = useState([])
+    let [data, setData] = useState([])
     const carousel = useRef(null)    
     const [valorTotal, setValorTotal] = useState(0)
     const [finalizarPedido, setFinalizarPedido] = useState(false)
@@ -17,16 +17,63 @@ export default function Produtos(){
     let carrinhoListaDinamicaLegendas = document.getElementsByClassName('carrinhoListaDinamicaLegendas')
     let carrinhoListaDinamicaValores = document.getElementsByClassName('carrinhoListaDinamicaValores')
 
-    useEffect(() =>{
-      fetch('http://localhost:3000/static/itensCarousel.json')
-      .then((response) => response.json())
-      .then(setData)
-    }, [])
+    // useEffect(() =>{
+    //   fetch('http://localhost:3000/static/itensCarousel.json')
+    //   .then((response) => response.json())
+    //   .then(setData)
+    // }, [])
 
     const handleLeftClick = (e) => {
       e.preventDefault();
       carousel.current.scrollLeft -= carousel.current.offsetWidth;
     }
+
+    // () => setData()
+    data = [
+
+      {
+          "id": "1",
+          "name": "Produto 1",
+          "image": "https://receitinhas.com.br/wp-content/uploads/2016/05/Bem-casados-Cia-de-Receitas.png",
+          "price": "30",
+          "oldPrice": "40"
+      },
+      {
+          "id": "2",
+          "name": "Produto 2",
+          "image": "https://receitinhas.com.br/wp-content/uploads/2016/05/Bem-casados-Cia-de-Receitas.png",
+          "price": "20",
+          "oldPrice": "30"
+      },
+      {
+          "id": "3",
+          "name": "Produto 3",
+          "image": "https://receitinhas.com.br/wp-content/uploads/2016/05/Bem-casados-Cia-de-Receitas.png",
+          "price": "10",
+          "oldPrice": "20"
+      },
+      {
+          "id": "4",
+          "name": "Produto 4",
+          "image": "https://receitinhas.com.br/wp-content/uploads/2016/05/Bem-casados-Cia-de-Receitas.png",
+          "price": "40",
+          "oldPrice": "20"
+      },
+      {
+          "id": "5",
+          "name": "Produto 5",
+          "image": "https://receitinhas.com.br/wp-content/uploads/2016/05/Bem-casados-Cia-de-Receitas.png",
+          "price": "10",
+          "oldPrice": "20"
+      },
+      {
+          "id": "6",
+          "name": "Produto 6",
+          "image": "https://receitinhas.com.br/wp-content/uploads/2016/05/Bem-casados-Cia-de-Receitas.png",
+          "price": "200",
+          "oldPrice": "20"
+      }
+    ]
 
 
     const handleRightClick = (e) => {
@@ -35,7 +82,7 @@ export default function Produtos(){
     }
 
     
-  
+    console.log(data)
     // if(!data || !data.length) return null;
 
     function limparLista(){
@@ -59,8 +106,7 @@ export default function Produtos(){
               </div>
                                            
             </div>
-            <div className='divTop' >      
-            teste        
+            <div className='divTop' >                  
               <div className='carousel' ref={carousel}>                
                 {data.map((item) => {  
                   const {id, name, price, oldPrice, image} = item;

@@ -283,6 +283,9 @@
     .divTop .carousel{
         max-width: 100vw;
     }
+    .buttonNext, .buttonPrev{
+        display: none;
+    }
 
 }
 

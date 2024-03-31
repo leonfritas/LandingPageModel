@@ -8,7 +8,7 @@
 }
 
 *{
-    font-family: cursive
+    font-family: cursive;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
 }
 
@@ -44,17 +44,7 @@
     gap: 50px;
 }
 
-.cardAnimation:first-child{
-    animation: cardFromLeft ease-in-out 800ms;
-}
 
-.cardAnimation:nth-child(2){
-    animation: cardFromLeft ease 1.1s;
-}
-
-.cardAnimation:last-child{
-    animation: cardFromLeft ease 1.3s;
-}
 
 
 .cardReceita{
@@ -89,14 +79,25 @@
     transform: scale(1.05);
 }
 
+.cardAnimation:first-child{
+    animation: cardFromLeft ease-in-out 800ms;
+}
+
+.cardAnimation:nth-child(2){
+    animation: cardFromLeft ease 1.1s;
+}
+
+.cardAnimation:last-child{
+    animation: cardFromLeft ease 1.3s;
+}
+
 @keyframes cardFromLeft{
     0%{
         display: none;
-        opacity: 0.1;
+        opacity: 0;
         transform: translateX(-500px);
     }
-    100%{
-        /* display: flex; */
+    100%{        
         opacity: 1;
         transform: translateX(0);
     }
