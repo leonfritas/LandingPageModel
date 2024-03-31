@@ -1,9 +1,9 @@
 
 import React, { useEffect, useState, useRef } from 'react'
-// import './css/produtos.css'
+import './css/produtos.css'
 import carrinho from './img/carEdit.gif'
-// import { Link, useNavigate } from 'react-router-dom'
-// import './css/finalizarPedidoCartao.css'
+import { Link, useNavigate } from 'react-router-dom'
+import './css/finalizarPedidoCartao.css'
 import { CheckIcon, XMarkIcon  } from "@heroicons/react/24/outline";
 
 
@@ -17,11 +17,11 @@ export default function Produtos(){
     let carrinhoListaDinamicaLegendas = document.getElementsByClassName('carrinhoListaDinamicaLegendas')
     let carrinhoListaDinamicaValores = document.getElementsByClassName('carrinhoListaDinamicaValores')
 
-    // useEffect(() =>{
-    //   fetch('http://localhost:3000/static/itensCarousel.json')
-    //   .then((response) => response.json())
-    //   .then(setData)
-    // }, [])
+    useEffect(() =>{
+      fetch('http://localhost:3000/static/itensCarousel.json')
+      .then((response) => response.json())
+      .then(setData)
+    }, [])
 
     const handleLeftClick = (e) => {
       e.preventDefault();
@@ -36,7 +36,7 @@ export default function Produtos(){
 
     
 
-    if(!data || !data.length) return null;
+    // if(!data || !data.length) return null;
 
     function limparLista(){
       carrinhoListaDinamicaValores[0].innerHTML = ''
@@ -61,9 +61,8 @@ export default function Produtos(){
             </div>
             <div className='divTop' >      
             teste        
-              {/*<div className='carousell' ref={carousel}>
-                teste
-                {/* {data.map((item) => {  
+              <div className='carousel' ref={carousel}>                
+                {data.map((item) => {  
                   const {id, name, price, oldPrice, image} = item;
                   return(
                     <div className='item' key={id}>
@@ -83,7 +82,7 @@ export default function Produtos(){
                   ) 
                 })} 
                 
-              </div>*/}
+              </div>
               
               <div className='carrinho'>
                 <div className='carrinhoDivLista'>

@@ -1,4 +1,4 @@
-/* #produtos{
+#produtos{
     height: 100%;
     width: 100%;
     display: flex;
@@ -175,12 +175,12 @@
     right: -150px;
     top: 150px;
 
-} */
+}
 
 
 
 /********** Carrinho *********/
-/* 
+
 .carrinho{
     width: 100%;
     display: flex;
@@ -260,11 +260,11 @@
     } 
 }
 
- */
+
 
 
 /******* Responsivo **********/
-/* 
+
 @media(max-width: 600px){
     #produtos{
         height: 100%;
@@ -284,7 +284,7 @@
         max-width: 100vw;
     }
 
-} */
+}
 
 
 /*
