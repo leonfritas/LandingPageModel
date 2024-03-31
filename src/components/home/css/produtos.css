@@ -8,6 +8,7 @@
     background-color: #f2f2f2;
     padding:50px;
     gap: 20px;
+    overflow-x: hidden;
 }
 
 
@@ -71,6 +72,7 @@
 
 .divTop{
     position: relative;
+    
 }
 
 
@@ -101,8 +103,7 @@
 .divTop .carousel .item .image img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    padding-right: 0;
+    object-fit: cover;    
 }
 
 .divTop .carousel .item .info{
@@ -224,6 +225,7 @@
     position: absolute;
     animation: carrinhoFromLeft linear infinite 5s;
     bottom: -100px;
+    overflow-x: hidden;
 
 }
 
