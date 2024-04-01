@@ -82,7 +82,6 @@ export default function Produtos(){
     }
 
     
-    console.log(data)
     // if(!data || !data.length) return null;
 
     function limparLista(){

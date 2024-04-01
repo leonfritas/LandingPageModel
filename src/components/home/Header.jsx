@@ -44,7 +44,6 @@ export default function Header() {
       
     }
     else if(scrollY < 700 && scrollTop === false){
-      console.log(navBar[0])
       navBar[0].classList.remove('HeaderScroll')
       navBar[0].style = '' 
       setScrollTop(true)
