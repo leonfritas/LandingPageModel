@@ -75,6 +75,21 @@
     
 }
 
+.ArrowLongRightIcon, .ArrowLongLeftIcon{
+    position: absolute;
+    width: 40px;
+    top: -30px;
+}
+
+.ArrowLongRightIcon{
+    left: 100%;
+}
+
+.ArrowLongLeftIcon{
+    right: 100%;
+}
+
+
 
 
 
@@ -187,7 +202,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 .carrinhoDivLista{
     display: flex;

@@ -11,7 +11,7 @@ animation: updown infinite alternate ease-in-out 500ms;
 
 .setaBaixo{
 position: absolute;
-bottom: 100px;
+bottom: 20px;
 margin: auto;
 right: 50%;
 left: 50%;

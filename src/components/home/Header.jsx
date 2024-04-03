@@ -34,14 +34,14 @@ export default function Header() {
 
   const navBar = document.getElementsByClassName('Header');
   const teste = document.getElementById("test");
-
+  const painelCarousel = document.getElementsByClassName('painelCarousel')
+  console.log(painelCarousel.current)
 
   function handleScroll(){
     const scrollY = window.pageYOffset; 
     if(scrollY > 700){
       navBar[0].classList.add('HeaderScroll')
-      setScrollTop(false)
-      
+      setScrollTop(false)      
     }
     else if(scrollY < 700 && scrollTop === false){
       navBar[0].classList.remove('HeaderScroll')
@@ -49,7 +49,11 @@ export default function Header() {
       setScrollTop(true)
       
     }
+
+    if(scrollY > 100){setToggleMenu(false)}
   }
+
+
 
 
   return (

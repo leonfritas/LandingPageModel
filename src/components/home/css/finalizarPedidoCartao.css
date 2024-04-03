@@ -1,7 +1,7 @@
 #finalizarPedido{
     position: fixed;
-    width: 95%;
-    height: 95%;
+    width: 100%;
+    height: 100%;
     top: 20px;
     background-color: #f2f2f2;
     transition: ease-in-out 1s;

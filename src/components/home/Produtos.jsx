@@ -4,7 +4,10 @@ import './css/produtos.css'
 import carrinho from './img/carEdit.gif'
 import { Link, useNavigate } from 'react-router-dom'
 import './css/finalizarPedidoCartao.css'
-import { CheckIcon, XMarkIcon  } from "@heroicons/react/24/outline";
+import { CheckIcon, XMarkIcon, ArrowLongLeftIcon, ArrowLongRightIcon } from "@heroicons/react/24/outline";
+
+
+
 
 
 export default function Produtos(){
@@ -26,6 +29,11 @@ export default function Produtos(){
     const handleLeftClick = (e) => {
       e.preventDefault();
       carousel.current.scrollLeft -= carousel.current.offsetWidth;
+    }
+    console.log(carousel)
+    const handleRightClick = (e) => {
+      e.preventDefault();
+      carousel.current.scrollLeft += carousel.current.offsetWidth;
     }
 
     // () => setData()
@@ -76,10 +84,7 @@ export default function Produtos(){
     ]
 
 
-    const handleRightClick = (e) => {
-      e.preventDefault();
-      carousel.current.scrollLeft += carousel.current.offsetWidth;
-    }
+
 
     
     // if(!data || !data.length) return null;
@@ -105,7 +110,9 @@ export default function Produtos(){
               </div>
                                            
             </div>
-            <div className='divTop' >                  
+            <div className='divTop' >  
+              <ArrowLongLeftIcon className="ArrowLongLeftIcon  text-gray-500" />
+              <ArrowLongRightIcon className="ArrowLongRightIcon text-gray-500" />                
               <div className='carousel' ref={carousel}>                
                 {data.map((item) => {  
                   const {id, name, price, oldPrice, image} = item;
@@ -130,6 +137,7 @@ export default function Produtos(){
               </div>
               
               <div className='carrinho'>
+               
                 <div className='carrinhoDivLista'>
                   <div className='carrinhoDivListaLegendas'>
                     <h3>Lista de compras</h3>   
@@ -183,8 +191,8 @@ export default function Produtos(){
               </div>
               
               <div className='FPButtons'>
-                <a><XMarkIcon class="h-6 w-6 " />Sair</a>
-                <a><CheckIcon class="h-6 w-6 " />Realizar Pagamento</a>
+                <a><XMarkIcon className="h-6 w-6 " />Sair</a>
+                <a><CheckIcon className="h-6 w-6 " />Realizar Pagamento</a>
               </div>
             </div>: ''}                                                   
         </main>        
